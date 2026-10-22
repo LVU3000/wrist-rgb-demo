@@ -1,6 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>三情境完整演示 · 中文解说字幕版</title><style>
-*{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:radial-gradient(ellipse at 85% 0,#163e47 0,transparent 45%),#0c1820;color:#e8f0f3;font:15px/1.8 "Microsoft YaHei",sans-serif}main{max-width:1440px;margin:auto;padding:28px 32px 40px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}h1{font-size:28px;line-height:1.5;margin:0}header p{margin:5px 0 0;color:#a4bfca}a{color:#9ee4d7;text-decoration:none}a:hover{text-decoration:underline}video{display:block;width:100%;border-radius:16px;border:1px solid #31515e;background:#071219}.chapters{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin:18px 0}button,.downloads a{font:inherit;border:1px solid #3d5f6b;background:#19323dc9;border-radius:10px;color:#d6efee;padding:10px 12px;cursor:pointer}button small{display:block;color:#8bb5c2;font:12px monospace;margin-top:4px}button:hover,button[aria-current=true]{border-color:#9bdfd1;background:#234955}button:focus-visible,a:focus-visible{outline:3px solid #9bdfd1;outline-offset:3px}.downloads{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.downloads a:first-child{background:#9bded2;color:#102b33;font-weight:600}.note{padding:16px 20px;border-left:3px solid #8bcbbf;background:#19313d7a;border-radius:0 10px 10px 0;color:#b6ccd6}.status{color:#9fe1d4;min-height:30px}.back{white-space:nowrap}details{margin-top:20px;color:#aac3cf}summary{cursor:pointer;min-height:44px}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid #2d4b57;padding:12px;text-align:left}th{color:#def3f0}.table-wrap{overflow:auto}@media(max-width:780px){main{padding:18px 14px}h1{font-size:22px}header{align-items:flex-start;flex-direction:column;gap:10px}.chapters{grid-template-columns:repeat(2,minmax(0,1fr))}.chapters button:last-child{grid-column:1/-1}.downloads a{flex:1;text-align:center}.note{font-size:13px}}
-</style></head><body><main><header><div><h1>腕关节RGB体位核对：三情境完整演示</h1><p>4分33秒 · 真实感升级 · 720p播放版 · 中文解说与字幕 · 28个分镜</p></div><a class="back" href="index.html">返回交互工作台 →</a></header><video id="final-video" controls playsinline preload="metadata" poster="exports/cover-v2.jpg" src="exports/demo-realistic-v2-720p.mp4" aria-label="三情境中文解说完整演示"></video><nav class="chapters" aria-label="视频章节"><button type="button" data-time="0.0">从头播放<small>00:00</small></button><button type="button" data-time="18.88">摄像头近景<small>00:18</small></button><button type="button" data-time="48.92">八腕骨近景<small>00:48</small></button><button type="button" data-time="65.76">偏转情境<small>01:05</small></button><button type="button" data-time="122.36">平移情境<small>02:02</small></button><button type="button" data-time="176.08">关键点缺失<small>02:56</small></button><button type="button" data-time="242.24">人工复核<small>04:02</small></button></nav><div class="status" id="watch-status" aria-live="polite">可以从头播放，也可直接跳到关键镜头。</div><div class="downloads"><a href="exports/demo-realistic-v2-720p.mp4" download>下载720p视频</a><a href="exports/三情境中文解说字幕_v2.srt" download>下载字幕SRT</a><a href="exports/中文解说脚本_v2.md" download>下载解说稿</a></div><p class="note">全片保留本地仿真标识。摄像头接收手部反射光，腕骨为简化结构；RGB画面与关键点来自三维渲染和模型投影。三种情境均经过调整后复采，流程结束于等待人工确认。</p><details><summary>查看本片数值与状态</summary><div class="table-wrap"><table><thead><tr><th>情境</th><th>α</th><th>β</th><th>d</th><th>状态</th></tr></thead><tbody><tr><td>偏转（3D输入17.5°）</td><td>16.09°</td><td>16.09°</td><td>0.000</td><td>S2提示调整</td></tr><tr><td>平移（归一化输入0.278）</td><td>1.02°</td><td>0.37°</td><td>0.286</td><td>S2提示调整</td></tr><tr><td>M点缺失</td><td>不可计算</td><td>不可计算</td><td>不可计算</td><td>S3暂停判断</td></tr><tr><td>三情境恢复后复采</td><td>0.28°</td><td>0.28°</td><td>0.000</td><td>S1待人工确认</td></tr></tbody></table></div><p>三维输入与图像投影测量不同。演示判定使用未舍入值；调整中不显示当前评估结果。未完成真实相机标定、识别模型和临床质量验证。</p></details></main><script>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>腕关节演示影片 · 中文解说</title><link rel="stylesheet" href="glass-ui.css?v=3"><link rel="stylesheet" href="video-glass.css?v=3"></head><body class="film-page"><main><header><div><h1>腕关节体位核对<span>三情境演示影片</span></h1><p>4分33秒 / 中文解说 / 可选字幕</p></div><a class="back" href="index.html">返回交互工作台 →</a></header><div class="film-screen"><video id="final-video" controls playsinline preload="metadata" poster="exports/cover-clean-v3.jpg" src="exports/demo-clean-v3.mp4" aria-label="三情境中文解说完整演示"><track kind="subtitles" src="exports/三情境中文解说字幕_v3.vtt" srclang="zh" label="中文字幕"></video></div><div class="film-tools"><span>偏转、平移、关键点缺失</span><button id="caption-toggle" type="button" aria-pressed="false">字幕：关闭</button></div><nav class="chapters" aria-label="视频章节"><button type="button" data-time="0.0">从头播放<small>00:00</small></button><button type="button" data-time="18.88">摄像头近景<small>00:18</small></button><button type="button" data-time="48.92">八腕骨近景<small>00:48</small></button><button type="button" data-time="65.76">偏转情境<small>01:05</small></button><button type="button" data-time="122.36">平移情境<small>02:02</small></button><button type="button" data-time="176.08">关键点缺失<small>02:56</small></button><button type="button" data-time="242.24">人工复核<small>04:02</small></button></nav><div class="status" id="watch-status" aria-live="polite">可以从头播放，也可直接跳到关键镜头。</div><div class="downloads"><a href="exports/demo-clean-v3.mp4" download>下载精简版视频</a><a href="exports/三情境中文解说字幕_v2.srt" download>下载字幕SRT</a><a href="exports/中文解说脚本_v2.md" download>下载解说稿</a></div><p class="note">保留仿真角标，字幕可通过按钮或播放器菜单开启。摄像头接收手部反射光，腕骨为简化结构；RGB画面与关键点来自三维渲染和模型投影。三种情境均经过调整后复采，流程结束于等待人工确认。</p><details><summary>查看本片数值与状态</summary><div class="table-wrap"><table><thead><tr><th>情境</th><th>α</th><th>β</th><th>d</th><th>状态</th></tr></thead><tbody><tr><td>偏转（3D输入17.5°）</td><td>16.09°</td><td>16.09°</td><td>0.000</td><td>S2提示调整</td></tr><tr><td>平移（归一化输入0.278）</td><td>1.02°</td><td>0.37°</td><td>0.286</td><td>S2提示调整</td></tr><tr><td>M点缺失</td><td>不可计算</td><td>不可计算</td><td>不可计算</td><td>S3暂停判断</td></tr><tr><td>三情境恢复后复采</td><td>0.28°</td><td>0.28°</td><td>0.000</td><td>S1待人工确认</td></tr></tbody></table></div><p>三维输入与图像投影测量不同。演示判定使用未舍入值；调整中不显示当前评估结果。未完成真实相机标定、识别模型和临床质量验证。</p></details></main><script>
 const video=document.getElementById('final-video'),status=document.getElementById('watch-status');
 const chapterButtons=[...document.querySelectorAll('[data-time]')];
 const originalVideoURL=new URL(video.getAttribute('src'),document.baseURI).href;
@@ -73,14 +71,14 @@ chapterButtons.forEach(button=>button.addEventListener('click',async()=>{
   status.textContent='正在定位：'+label+'……';
   try{
     if(fullVideoPromise){
-      if(!blobURL)status.textContent='正在准备章节跳转，首次需加载约9MB视频……';
+      if(!blobURL)status.textContent='正在准备章节跳转，首次需加载完整视频……';
       await fullVideoPromise;
     }else{
       await waitForMetadata();
     }
     if(id!==requestId)return;
     if(time>0&&!blobURL&&!canSeekTo(time)){
-      status.textContent='正在准备章节跳转，首次需加载约9MB视频……';
+      status.textContent='正在准备章节跳转，首次需加载完整视频……';
       await prepareFullVideo();
     }
     if(id!==requestId)return;
@@ -89,7 +87,7 @@ chapterButtons.forEach(button=>button.addEventListener('click',async()=>{
     catch(error){
       if(id!==requestId)return;
       if(blobURL)throw error;
-      status.textContent='正在准备章节跳转，首次需加载约9MB视频……';
+      status.textContent='正在准备章节跳转，首次需加载完整视频……';
       await prepareFullVideo();
       if(id!==requestId)return;
       await seekAndVerify(time,id);
@@ -111,4 +109,25 @@ window.addEventListener('pagehide',event=>{
   if(fetchController)fetchController.abort();
   if(blobURL)URL.revokeObjectURL(blobURL);
 });
+
+const captionToggle=document.getElementById('caption-toggle');
+captionToggle.addEventListener('click',()=>{
+  const track=video.textTracks[0];
+  if(track)track.mode=track.mode==='showing'?'disabled':'showing';
+  syncCaptionButton();
+});
+function syncCaptionButton(){
+  const showing=video.textTracks[0]?.mode==='showing';
+  captionToggle.setAttribute('aria-pressed',String(showing));
+  captionToggle.textContent=showing?'字幕：开启':'字幕：关闭';
+}
+video.textTracks.addEventListener('change',syncCaptionButton);
+video.addEventListener('timeupdate',()=>{
+  if(chapterBusy||!metadataReady())return;
+  const active=chapterButtons.filter(b=>Number(b.dataset.time)<=video.currentTime+.05).at(-1);
+  if(!active)return;
+  chapterButtons.forEach(b=>b.setAttribute('aria-current',String(b===active)));
+  status.textContent='当前章节：'+active.childNodes[0].textContent.trim();
+});
+
 </script></body></html>

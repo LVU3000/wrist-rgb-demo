@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#101a20">
+  <meta name="theme-color" content="#101b2c">
   <meta name="description" content="从RGB视野、模型投影关键点，到几何计算、姿态调整与人工确认的八步三维演示。">
   <title>腕关节RGB体位核对 · 全流程三维演示</title>
   <link rel="stylesheet" href="workflow-ui.css">
@@ -19,10 +19,10 @@
 </header>
 <main id="top" class="wf-main">
   <section class="wf-intro" aria-labelledby="wf-page-title">
-    <div><p class="eyebrow">RGB POSITION REVIEW / COMPLETE WORKFLOW</p><h1 id="wf-page-title">腕关节RGB体位核对 · 全流程三维演示</h1><p>实拍外观参考的房间与设备、可逐骨观察的腕骨，以及采集—计算—调整—复核的完整过程。</p></div>
+    <div><p class="eyebrow">RGB POSITION REVIEW / COMPLETE WORKFLOW</p><h1 id="wf-page-title">腕关节体位核对 · 三维工作台</h1><p>从光学采集到调整复核，逐步观察整个过程。</p></div>
     <button type="button" id="wf-record" class="button primary">录制48秒导览</button>
   </section>
-  <div class="wf-provenance" id="wf-source"><strong>来源说明</strong><p>RGB 画面由三维场景渲染，关键点来自已知模型投影；未训练识别网络，未完成实机标定。视野和光路均为示意，摄像头接收环境光。</p></div>
+
 
   <section id="workflow-workspace" class="wf-workspace" aria-label="RGB体位核对流程工作台">
     <aside class="wf-process glass" aria-label="八步流程">
@@ -67,14 +67,15 @@
 
     <aside class="wf-inspector glass" aria-labelledby="wf-inspector-title">
       <div class="wf-section-heading"><h2 id="wf-inspector-title">姿态与结构</h2><span>手动探索</span></div>
-      <section class="wf-control-section" aria-labelledby="wf-scenario-title"><h3 id="wf-scenario-title">输入情境</h3><div class="field"><label for="wf-scenario">情境预设</label><select id="wf-scenario"><option value="baseline">基准输入</option><option value="deviation" selected>手部偏转</option><option value="translation">整体平移</option><option value="missing">关键点缺失</option></select></div><label class="range-label" for="wf-angle"><span>三维偏转输入</span><output id="wf-angle-value" for="wf-angle">17.5°</output></label><input id="wf-angle" type="range" min="-30" max="30" step="0.5" value="17.5"><label class="range-label" for="wf-shift"><span>归一化平移输入</span><output id="wf-shift-value" for="wf-shift">0.000</output></label><input id="wf-shift" type="range" min="-0.35" max="0.35" step="0.005" value="0"><label class="check-field wf-missing-field"><input id="wf-missing" type="checkbox"><span>模拟关键点缺失</span></label><p class="wf-small-copy">滑块控制三维姿态；α、β、d由RGB投影计算，透视下不必与输入同值。改变姿态后需重新采集。</p></section>
-      <section class="wf-control-section" aria-labelledby="wf-bone-title"><h3 id="wf-bone-title">腕部结构观察</h3><label class="range-label" for="wf-opacity"><span>体表不透明度</span><output id="wf-opacity-value" for="wf-opacity">35%</output></label><input id="wf-opacity" type="range" min="0" max="100" step="1" value="35"><label class="check-field"><input id="wf-bones" type="checkbox" checked><span>显示示意骨骼</span></label><div class="field wf-bone-field"><label for="wf-bone-select">选择腕骨</label><select id="wf-bone-select"><option value="all">全部八块腕骨</option><option value="scaphoid">舟骨</option><option value="lunate">月骨</option><option value="triquetrum">三角骨</option><option value="pisiform">豌豆骨</option><option value="trapezium">大多角骨</option><option value="trapezoid">小多角骨</option><option value="capitate">头状骨</option><option value="hamate">钩骨</option></select></div><label class="range-label" for="wf-explode"><span>腕骨分离展示</span><output id="wf-explode-value" for="wf-explode">0%</output></label><input id="wf-explode" type="range" min="0" max="1" step="0.01" value="0"><p class="wf-small-copy">分离仅用于识别组成，0% 恢复原位。示意腕骨不是逐骨影像分割结果。</p></section>
+      <section class="wf-control-section" aria-labelledby="wf-scenario-title"><h3 id="wf-scenario-title">输入情境</h3><div class="field"><label for="wf-scenario">情境预设</label><select id="wf-scenario"><option value="baseline">基准输入</option><option value="deviation" selected>手部偏转</option><option value="translation">整体平移</option><option value="missing">关键点缺失</option></select></div><label class="range-label" for="wf-angle"><span>三维偏转输入</span><output id="wf-angle-value" for="wf-angle">17.5°</output></label><input id="wf-angle" type="range" min="-30" max="30" step="0.5" value="17.5"><label class="range-label" for="wf-shift"><span>归一化平移输入</span><output id="wf-shift-value" for="wf-shift">0.000</output></label><input id="wf-shift" type="range" min="-0.35" max="0.35" step="0.005" value="0"><label class="check-field wf-missing-field"><input id="wf-missing" type="checkbox"><span>模拟关键点缺失</span></label><details class="wf-control-help"><summary>输入与计算说明</summary><p class="wf-small-copy">滑块控制三维姿态；α、β、d由RGB投影计算，透视下不必与输入同值。改变姿态后需重新采集。</p></details></section>
+      <section class="wf-control-section" aria-labelledby="wf-bone-title"><h3 id="wf-bone-title">腕部结构观察</h3><label class="range-label" for="wf-opacity"><span>体表不透明度</span><output id="wf-opacity-value" for="wf-opacity">35%</output></label><input id="wf-opacity" type="range" min="0" max="100" step="1" value="35"><label class="check-field"><input id="wf-bones" type="checkbox" checked><span>显示示意骨骼</span></label><div class="field wf-bone-field"><label for="wf-bone-select">选择腕骨</label><select id="wf-bone-select"><option value="all">全部八块腕骨</option><option value="scaphoid">舟骨</option><option value="lunate">月骨</option><option value="triquetrum">三角骨</option><option value="pisiform">豌豆骨</option><option value="trapezium">大多角骨</option><option value="trapezoid">小多角骨</option><option value="capitate">头状骨</option><option value="hamate">钩骨</option></select></div><label class="range-label" for="wf-explode"><span>腕骨分离展示</span><output id="wf-explode-value" for="wf-explode">0%</output></label><input id="wf-explode" type="range" min="0" max="1" step="0.01" value="0"><details class="wf-control-help"><summary>结构展示说明</summary><p class="wf-small-copy">分离仅用于识别组成，0% 恢复原位。示意腕骨不是逐骨影像分割结果。</p></details></section>
       <section class="wf-control-section wf-object-section" aria-labelledby="wf-object-title"><h3 id="wf-object-title">当前观察对象</h3><p id="wf-object-detail">选择摄像头或腕骨，查看结构与作用说明。</p></section>
       <details class="wf-method-details"><summary>读懂本页的演示边界</summary><div><p>摄像头接收环境反射光；视野锥体用于说明采集范围，不表示向手腕发射光束。</p><p>房间和设备按照片参考近似建模，尺寸未经实测校准。手掌按规则角驱动刚性转动，关键点由模型投影得到。</p><p>计算与提示展示规则流程；S1 仍需人工确认，S2 提示调整，S3 表示输入不足或不可计算。</p><p>真实应用还需相机标定、识别模型、图像与投影误差验证，以及完整的专业审核。</p></div></details>
     </aside>
   </section>
+<details class="wf-provenance" id="wf-source"><summary>演示来源与输入说明</summary><p>RGB 画面由三维场景渲染，关键点来自已知模型投影；未训练识别网络，未完成实机标定。视野和光路均为示意，摄像头接收环境光。房间与设备参考实拍外观近似建模，腕骨可逐骨观察，均为示意结构。</p></details>
   <div class="wf-bottom-links"><a href="#workflow-workspace">返回交互工作台</a><a href="narrated-final.html">观看中文解说视频</a></div>
-  <section class="demo-film wf-demo-film" id="workflow-film" aria-labelledby="wf-film-title"><div><p class="eyebrow">THREE SCENARIOS / CHINESE NARRATION</p><h2 id="wf-film-title">三情境中文解说 · 真实感升级 · 720p播放版</h2><p>参照实拍完善模型细节，镜头平滑过渡；偏转、平移、关键点缺失均含中文解说、逐句字幕及放大近景。调整后重新采集，结束于等待人工确认。</p><a href="exports/demo-realistic-v2-720p.mp4" download>下载 720p 轻量播放版</a></div><video controls preload="metadata" playsinline poster="exports/cover-v2.jpg" src="exports/demo-realistic-v2-720p.mp4" aria-label="三情境中文解说完整演示"></video></section>
+  <section class="demo-film wf-demo-film" id="workflow-film" aria-labelledby="wf-film-title"><div><p class="eyebrow">THREE SCENARIOS / CHINESE NARRATION</p><h2 id="wf-film-title">三情境演示 · 精简画面版</h2><p>偏转、平移与关键点缺失，保留中文解说和完整核对流程。字幕可在播放器中开启。</p><a href="exports/demo-clean-v3.mp4" download>下载精简画面视频</a></div><video controls preload="metadata" playsinline poster="exports/cover-clean-v3.jpg" src="exports/demo-clean-v3.mp4" aria-label="三情境中文解说完整演示"><track kind="subtitles" src="exports/三情境中文解说字幕_v3.vtt" srclang="zh" label="中文字幕"></video></section>
 </main>
 <footer class="wf-footer"><span>腕关节 RGB 体位核对与调整反馈仿真</span><span>流程原型 · 人工复核</span></footer>
 </body>
